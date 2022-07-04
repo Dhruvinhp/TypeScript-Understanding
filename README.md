@@ -3,14 +3,26 @@
 perform this commands after clone the repo
 and make sure you have installed node, npm.
 
-`npm i -g typescript`
+1. install typescript
 
-`npm install`
+- `npm i -g typescript`
 
-`tsc app.ts` for specific file 
+2. setup project
 
-for general project folder:
+- `npm install`
 
-`tsc --init` 
+3. start development server
 
-`tsc -w`
+- `npm start`
+
+4. start compilation
+
+- for specific file
+
+- `tsc app.ts` 
+
+- for general project folder:
+
+- `tsc --init` 
+
+- `tsc -w`
