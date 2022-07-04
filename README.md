@@ -9,8 +9,8 @@ and make sure you have installed node, npm.
 
 `tsc app.ts` for specific file 
 
-for general project folder
+for general project folder:
 
 `tsc --init` 
 
-`tsc`
+`tsc -w`
