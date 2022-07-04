@@ -1,15 +1,22 @@
-// Union Types e.g input1: number | string,
-// Literal types e.g resultConcat: 'to_number' | 'to_string', means that resultConcat can only be 'to_number' or 'to_string'
-function combine(input1, input2, resultConcat) {
-    var result;
-    if (typeof input1 === 'number' && typeof input2 === 'number' || resultConcat === 'to_number') {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + " " + input2.toString();
-    }
-    return result;
+// ====== Function return types and void ======
+function add(num1, num2) {
+    return num1 + num2;
 }
-console.log("Number 1: ", combine(10, 20, "to_number"));
-console.log("Number 2: ", combine("25", "26", "to_number"));
-console.log("String: ", combine("Dhruvin", "Prajapati", "to_string"));
+function printResult(num) {
+    console.log("Result: " + num);
+}
+printResult(add(5, 12));
+// ====== Function Type ======
+// let exFunction: Function;
+var exFunction;
+exFunction = add;
+// exFunction = printResult; // ERROR cause printResult doesn't match the criteria of the function type
+console.log("by Function Type: " + exFunction(5, 12));
+// ====== CallBack function ======
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+}
+addAndHandle(5, 12, function (result) {
+    console.log("by CallBack: " + result);
+});
